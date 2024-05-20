@@ -16,8 +16,8 @@ import oci.object_storage
 def handler(ctx, data: io.BytesIO=None):
     try:
         body = json.loads(data.getvalue())
-        bucketName = body["bucketName"]
-        objectName = body["objectName"]
+        bucketName = body["bckt-mftg-gravimetrico-uy-output-tst"]
+        objectName = body["object1annual-enterprise-survey-2021-financial-year-provisional-csv.csv"]
     except Exception:
         error = 'Input a JSON object in the format: \'{"bucketName": "<bucket name>"}, "objectName": "<object name>"}\' '
         raise Exception(error)
