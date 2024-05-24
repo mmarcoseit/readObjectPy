@@ -41,6 +41,8 @@ def get_object(bucketName, objectName):
             message = object.data.text
         else:
             message = "Failed: The object " + objectName + " could not be retrieved."
+    except EnvironmentError as enviroment:
+        message = "Error en la config del entorno"
     except Exception as e:
         message = "Failed: " + str(e.message)
     return { "content": message }
