@@ -44,5 +44,5 @@ def get_object(bucketName, objectName):
     except EnvironmentError as enviroment:
         message = "Error en la config del entorno"
     except Exception as e:
-        message = "Failed: " + str(e.message)
+        message = "Personal Failed: " + str(e.message)
     return { "content": message }
